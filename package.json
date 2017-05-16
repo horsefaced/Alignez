@@ -1,0 +1,29 @@
+{
+    "name": "alignez",
+    "version": "1.0.0",
+    "description": "简单的先进先出视频排队系统",
+    "main": "app/app.js",
+    "scripts": {
+	"postinstall": "ln -s ../app node_modules/app",
+	"start": "nodemon app/app.js --ignore demo/",
+	"test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+	"type": "git",
+	"url": "https://github.com/horsefaced/Alignez.git"
+    },
+    "author": "horsefaced",
+    "license": "MIT",
+    "bugs": {
+	"url": "https://github.com/horsefaced/Alignez/issues"
+    },
+    "homepage": "https://github.com/horsefaced/Alignez",
+    "dependencies": {
+	"bluebird": "^3.5.0",
+	"colors": "^1.1.2",
+	"date-utils": "^1.2.21",
+	"dotenv": "^4.0.0",
+	"socket.io": "^2.0.1",
+	"uuid": "^3.0.1"
+    }
+}
