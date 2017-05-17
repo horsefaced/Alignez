@@ -1,12 +1,11 @@
 const extend = require('util')._extend;
+const uuid = require('uuid');
 
 class Assist {
-    var owner;
-    
     constructor(owner, socket) {
-	super();
 	this.owner = owner;
-	this.owner.alignez = { socket: socket };
+	this.socket = socket;
+	this.id = uuid.v1();
     }
 
     clone() {

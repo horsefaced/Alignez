@@ -1,0 +1,39 @@
+extends layout
+
+block content
+        h1= title
+        .row
+                fieldset.col-md-6.col-xs-6#user
+                        legend 用户信息
+                        .form-group
+                                label(for='#user.id') 用户id:
+                                input.id.form-controll(value=user.id)
+                        .form-group
+                                label(for='#user.name') 用户名:
+                                input.name.form-controll(value=user.name)
+                        .form-group
+                                button.btn.login(type='button') 登录
+                        .form-group
+                                button.btn.logout(type='button') 登出
+
+                fieldset.col-md-6.col-xs-6#oper
+                        legend 操作部分
+                        .form-group
+                                button.btn.monitor(type='button') 开始服务
+                        .form-group
+                                button.btn.lineup(type='button') 开始排队
+                        .form-group
+                                button.btn.answer(type='answer') 接听排队
+                        .form-group
+                                button.btn.leave(type='button') 离开
+        .row
+                fieldset.col-md-12#info
+                        legend 系统信息
+                        .form-group
+                                textarea.info
+
+
+block scripts
+        script(src='//localhost:10010/socket.io/socket.io.js')
+        script(src='////cdn.bootcss.com/jquery/3.2.1/jquery.min.js')
+        script(src='/javascripts/index.js')
