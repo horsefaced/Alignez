@@ -63,6 +63,8 @@
 
 ### 系统流程
 
+github好像不支持mermaid，各位可以下载后用typora这个markdown编辑器来看。
+
 ```mermaid
 sequenceDiagram
 participant 服务人员
@@ -79,4 +81,18 @@ deactivate 排队系统
 activate 排队系统
 排队系统-->>服务人员: start { channel, opposite }
 deactivate 排队系统
+```
+```mermaid
+sequenceDiagram
+participant 用户
+participant 排队系统
+用户->>排队系统: login { id: user's id }
+activate 排队系统
+排队系统-->>用户: login
+deactivate 排队系统
+用户->>排队系统: lineup
+activate 排队系统
+排队系统-->>用户: lineup
+deactivate 排队系统
+排队系统-->>用户: start { channel, opposite }
 ```
